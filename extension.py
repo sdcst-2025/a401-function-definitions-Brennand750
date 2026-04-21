@@ -33,38 +33,62 @@ output is "There is 1 solution, x=??"
 If there are two solutions:
 output is: "The solutions are x=?? and x=??"
 """
-
-def numSolutions(a,b,c):
+import math
+def numSolutions(a: float,b: float,c: float):
     # inputs:
     # float a
     # float b
     # float c
-    # Description:
+    # Description: returns an integer with the number of solutions based off of the discriminates with number of solutions
     #
     # return 0, 1 or 2
-    return 
+    discriminate = b**2 - 4 * a * c
+    discriminate = isinstance(discriminate,float)
+    discriminate = int(discriminate)
+    if discriminate < 0:
+        return 0
+    elif discriminate == 0:
+        return 1
+    elif discriminate > 0:
+        return 2
+    else:
+        return 2
+        
 
-def solutions(a,b,c):
+
+def solutions(a: float,b: float,c: float):
     #inputs:
     # float a
     # float b
     # float c
-    # Desription:
+    # Desription: finding both x values if the discriminate is a non zero
     #
     # return tuple of float solution1 and float solution2
-    return
+    discriminate = b**2 - 4 * a * c
+    if discriminate < 0:
+        return()
+    elif discriminate == 0:
+        x = -1*b / 2*a
+        return(x,x)
+    else:
+        sqrt_disc = math.sqrt(discriminate)
+        x1 = (-1*b + math.sqrt(b**2 - 4 * a * c)) / (2*a)
+        x2 = (-1*b - math.sqrt(b**2 - 4 * a * c)) / (2*a)
+        return (x1,x2)
 
 def title():
     # inputs none
     # return str of All the title and instructions on one line
-    return
+    instructions = print("This program will use the function numSolutions(a,b,c) to find the discriminate and the number of solutions there are. Then in the solutions(a,b,c) you are solving using the quadratic formula if they the number of solutions are non zeros. ")
+    return instructions
 
 
 def main():
     # Display Title and Instructions
     print( title() )
     # Your code and function calls should go here
-
+    print(numSolutions(1,6,8))
+    print(solutions(1,6,8))
 
 
 main()

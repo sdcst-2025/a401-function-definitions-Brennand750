@@ -5,7 +5,8 @@ def sum(a,b):
     # a : float 
     # b : float
     # return value: returns the sum of the 2 numbers
-    return
+    answer = a + b
+    return answer
 
 
 
@@ -14,14 +15,17 @@ if __name__ == "__main__":
     #this should return a value of 7
     x = sum(3,4)
     assert x == 7
-
     #this should return a value of 12.5
     y = sum(11,1.5)
     assert y == 12.5
-
+    #this should return a value of 7
     assert sum(5,2) == 7
+    #this should return a value of 3
     assert sum(1,2) == 3
+    #this should return a value of -27
     assert sum(5,-32) == -27
+    #this should return a value of 7.5
     assert sum(5,2.5) == 7.5
+    #this should return a value of 7.4
     assert round(sum(5.1,2.3),1) == 7.4
     

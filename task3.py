@@ -6,8 +6,14 @@ The return value is the sum of all the numbers in the list
 added together
 (2 points)
 """
-def perimeter():
-  return
+def perimeter(perimeter):
+  # input a list or tuple
+  # function perimeter is a tuple
+  # convert function perimeter for a tuple to a list
+  # add the sum of all numbers in the list
+  if isinstance(perimeter,tuple):
+    perimeter =list(perimeter)
+  return sum(perimeter)
 
 if __name__ == "__main__":
   assert perimeter( [5,2,3,4] ) == 14

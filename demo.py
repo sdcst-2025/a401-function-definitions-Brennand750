@@ -20,3 +20,8 @@ def area_rectangle(length,width):
 
 x = area_rectangle(4,"hello")
 print(x)
+
+
+
+
+

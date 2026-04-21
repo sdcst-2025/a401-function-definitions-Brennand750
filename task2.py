@@ -9,9 +9,15 @@ If you are stuck, don't forget to refer to your assignment on lists to help you 
 The return value is the largest value in the list
 (2 points)
 """
-def largest():
-  
-  return
+def largest(data):
+  # inputs
+  # input a list or tuple, and should convert any tuples to list
+  # data(list or tuple): input the list or tuple
+  # x value to determine if larger number is a float or integer
+  # return the largest value in the list
+  if isinstance(data, tuple):
+    data = list(data)
+  return max(data)
 
 if __name__ == "__main__":
   assert largest((3,1,4,7,13,9)) == 13

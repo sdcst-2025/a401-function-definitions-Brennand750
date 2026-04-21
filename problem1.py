@@ -9,9 +9,19 @@ Return the missing side
 assert hypotenuse(3,4,True) == 5
 (2 points)
 """
-
-def hypotenuse():
-    return
+import math
+def hypotenuse(a:float, b:float, calculate:bool):
+    # input 2 float numbers and a boolean
+    # If boolean is true, find hypotenuse
+    # If boolean is false, then the larger number is the hypotenuse
+    if calculate:
+        return math.sqrt(a**2 + b**2)
+    else:
+        hypo = max(a,b)
+        leg = min(a,b)
+        if hypo >= leg:
+            return math.sqrt(hypo**2 - leg**2)
+    
 
 if __name__ == "__main__":
     assert hypotenuse(3,4,True) == 5
